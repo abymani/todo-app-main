@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+:root {
+    /* ### Primary */
+    
+    --Bright-Blue: hsl(220, 98%, 61%);
+    /* - Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%) */
+    
+    /* ### Neutral
+    
+    ### Light Theme */
+    
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Light-Grayish-Blue: hsl(233, 11%, 84%);
+    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+    
+    /* ### Dark Theme */
+    
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+
+
+    /* theme dark colors*/
+    --bg-image:url(../images/bg-desktop-dark.jpg);
+    --clr-background: var(--Very-Dark-Blue);
+    --clr-heading:var(--Light-Grayish-Blue-hover);
+    --clr-list-background:var(--Very-Dark-Desaturated-Blue);
+    --clr-list-item-text:var(--Light-Grayish-Blue);
+    --clr-checked-unactive-text:var(--Dark-Grayish-Blue);
+    --clr-hover:var(--Light-Grayish-Blue-hover);
+
+
+    --fs-regular: 18px;
+    --fw-light:300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --ff-josefin:'Josefin Sans', sans-serif;
+
+}
+
+
+* {
+    font-family: var(--ff-josefin);
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color:var(--clr-background) ;
+    background-image: var(--bg-image);
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 30rem;
+    padding: 2rem;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+    .heading {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--clr-heading);
+    }
+    .theme-icon {
+        aspect-ratio: 1;
+        width: 1.5rem;
+        background-image: url(../images/icon-sun.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+.add-todo-container{
+    position: relative;
+    width: 100%;
+}
+.add-todo {
+    width: 100%;
+    background-color: var(--clr-list-background);
+    border: 0;
+    padding: 1rem;
+    border-radius: 5px;
+    position: relative;
+    outline: 0;
+    color: var(--clr-list-item-text);
+    padding-left: 3rem;
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-light);
+}
+
+    .add-todo-container::after {
+
+        content: "";
+        aspect-ratio: 1;
+        width: 1.1rem;
+        border: 1px solid var(--Very-Dark-Grayish-Blue);
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translate(0,-50%);
+    }
+
+.list-controls-container {
+  
+    background-color: var(--clr-list-background);
+    border-radius: 5px;
+
+}
+    .list-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+    }
+        label {
+            color: var(--clr-list-item-text);
+            font-size: var(--fs-regular);
+            font-weight: var(--fw-light);
+        }
+        input[type = "checkbox"] {
+            -webkit-appearance: none;
+            appearance: none;
+            aspect-ratio: 1;
+            width: 1.2rem;
+            border-radius: 50%;
+            border: 1px solid var(--Very-Dark-Grayish-Blue);
+            cursor: pointer;
+            /* background-color: aqua; */
+        }
+        input:checked {
+            /* background-color: aliceblue; */
+            background-image:url(../images/icon-check.svg), linear-gradient(150deg,hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 0.5rem,100%;
+
+        }
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: var(--clr-checked-unactive-text);
+    font-size: 0.75rem;
+}
+.items-left {
+    
+}
+.view-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+button {
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+}
+button:hover {
+    color: var(--clr-hover);
+}
