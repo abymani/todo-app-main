@@ -125,7 +125,7 @@ main {
     border-radius: 5px;
 
 }
-    .list-item {
+    form >div {
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -137,6 +137,9 @@ main {
             font-size: var(--fs-regular);
             font-weight: var(--fw-light);
         }
+        label::first-letter {
+            text-transform: capitalize;
+        }
         input[type = "checkbox"] {
             -webkit-appearance: none;
             appearance: none;
@@ -145,15 +148,23 @@ main {
             border-radius: 50%;
             border: 1px solid var(--Very-Dark-Grayish-Blue);
             cursor: pointer;
-            /* background-color: aqua; */
+
         }
         input:checked {
-            /* background-color: aliceblue; */
             background-image:url(../images/icon-check.svg), linear-gradient(150deg,hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
             background-repeat: no-repeat;
             background-position: center;
             background-size: 0.5rem,100%;
 
+        }
+        .delete-list-item {
+            margin-left: auto;
+            aspect-ratio: 1;
+            width: 1rem;
+            background-image: url(../images/icon-cross.svg);
+            background-repeat: no-repeat;
+            background-size: 1rem;
+            cursor: pointer;
         }
 
 .controls {
