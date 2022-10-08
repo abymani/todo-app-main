@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style/style.css">
   <script src="index.js" defer></script>
+  <script src="drag.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <title>Frontend Mentor | Todo app</title>
 
@@ -29,12 +30,27 @@
     <div class="list-controls-container">
       
       <form action="#">
-        <div class="list-item empty" >
+        <div class="empty" >
           <label for="todo1">Empty list</label>
         </div>
-        <!-- <div class="list-item">
+        <!-- <div class="list-item" draggable="true">
           <input type="checkbox" name="todo2" value="walk">
-          <label for="todo2">go out for a walk</label>
+          <label for="todo2">go out for a walk1</label>
+          <div class="delete-list-item"></div>
+        </div>
+        <div class="list-item" draggable="true">
+          <input type="checkbox" name="todo2" value="walk">
+          <label for="todo2">go out for a walk2</label>
+          <div class="delete-list-item"></div>
+        </div>
+        <div class="list-item" draggable="true">
+          <input type="checkbox" name="todo2" value="walk">
+          <label for="todo2">go out for a walk3</label>
+          <div class="delete-list-item"></div>
+        </div>
+        <div class="list-item" draggable="true">
+          <input type="checkbox" name="todo2" value="walk">
+          <label for="todo2">go out for a walk4</label>
           <div class="delete-list-item"></div>
         </div> -->
   
@@ -43,9 +59,9 @@
       <div class="controls">
         <span class="items-left">0 item left</span>
         <div class="view-controls">
-          <button class="all">All</button>
-          <button class="active">Active</button>
-          <button class="completed">Completed</button>
+          <button class="all control">All</button>
+          <button class="active control">Active</button>
+          <button class="completed control">Completed</button>
         </div>
         <button class="clear-completed">Clear Completed</button>
     </div>

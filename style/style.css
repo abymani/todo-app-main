@@ -174,9 +174,6 @@ main {
     color: var(--clr-checked-unactive-text);
     font-size: 0.75rem;
 }
-.items-left {
-    
-}
 .view-controls {
     display: flex;
     gap: 0.5rem;
@@ -188,6 +185,18 @@ button {
     cursor: pointer;
     font-size: inherit;
 }
-button:hover {
+button:hover,.control:hover {
     color: var(--clr-hover);
 }
+
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
